@@ -53,6 +53,7 @@ function searchDir($sDir) {
             if (is_dir($sDir . $sFile)) {
                 searchDir($sDir . $sFile . '/');
             } else {
+            	// Change the extensions below if needed. For example, if you want to replace a keyword only in PHP files, remove the following conditions.
                 if (substr($sFile, -4) === '.php' || substr($sFile, -3) === '.js' || substr($sFile, -4) === '.tpl' || substr($sFile, -4) === '.sql' || substr($sFile, -4) === '.css' ||  substr($sFile, -4) === '.ini') {
                     if(filesize($sDir . '/' . $sFile) === 0) {
                         break;
