@@ -11,8 +11,6 @@ I finally decided myself to publish it on Github so everybody can enjoy it :smil
 
 - PHP 5 or higher
 
-- MySQL/MariaDB 5.0.15 or higher
-
 
 ## The Author
 
