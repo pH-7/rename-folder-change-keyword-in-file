@@ -54,9 +54,15 @@ function searchDir($sDir) {
                 searchDir($sDir . $sFile . '/');
             } else {
             	// Change the extensions below if needed. For example, if you want to replace a keyword only in PHP files, remove the following conditions.
-                if (substr($sFile, -4) === '.php' || substr($sFile, -3) === '.js' || substr($sFile, -4) === '.tpl' || substr($sFile, -4) === '.sql' || substr($sFile, -4) === '.css' ||  substr($sFile, -4) === '.ini') {
+                if (
+                        substr($sFile, -4) === '.php' || substr($sFile, -3) === '.js' ||
+                        substr($sFile, -4) === '.tpl' || substr($sFile, -4) === '.sql' ||
+                        substr($sFile, -4) === '.css' ||  substr($sFile, -4) === '.ini' ||
+                        substr($sFile, -3) === '.sh'
+                    ) {
                     if(filesize($sDir . '/' . $sFile) === 0) {
-                        break;
+                        // Skip for empty files
+                        continue;
                     }
                     $sContentFile = file_get_contents($sDir . '/' . $sFile);
                     $sContentFile = str_ireplace($sOldKey, $sNewKey, $sContentFile);
