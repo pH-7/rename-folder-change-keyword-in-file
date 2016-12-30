@@ -3,7 +3,7 @@
  * This is useful to change the year in the copyright header for example.
  *
  * @author         Pierre-Henry Soria <pierrehenrysoria@gmail.com>
- * @copyright      (c) 2012-2016, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright      (c) 2012-2017, Pierre-Henry Soria. All Rights Reserved.
  * @license        GNU General Public License 3 (http://www.gnu.org/licenses/gpl.html)
  * @package        pH7CMS
  */
