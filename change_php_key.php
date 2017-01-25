@@ -97,7 +97,7 @@ if (count($aError) > 0) {
         echo '<p class="error">' . $sErr . '</p>';
 } elseif (count($aSuccess) > 1) {
     foreach ($aSuccess as $sSucc)
-        echo '<p class="sucess">' . $sSucc . '</p>';
+        echo '<p class="success">' . $sSucc . '</p>';
 }
 ?>
 <fieldset>
