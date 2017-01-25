@@ -17,15 +17,18 @@
 label {
     display:block;
 }
-.error {
-    color:red;
-font-weight:bold;
-text-align:center;
-}
-.sucess {
-    color:green;
+.success, .error, .warning {
     font-weight:bold;
     text-align:center;
+}
+.success {
+    color:green;
+}
+.error {
+    color:red;
+}
+.warning {
+    color: #9F6000;
 }
 form {
     text-align:center;
@@ -66,7 +69,7 @@ function searchDir($sDir) {
                     }
                     $sContentFile = file_get_contents($sDir . '/' . $sFile);
                     $sContentFile = str_ireplace($sOldKey, $sNewKey, $sContentFile);
-                    file_put_contents($sDir . '/' . $sFile, $sContentFile) or die('Impossible to wrtite file: ' . htmlspecialchars($sDir . '/' . $sFile));
+                    file_put_contents($sDir . '/' . $sFile, $sContentFile) or print('<p class="warning">Was unable to wrtite file: ' . htmlspecialchars($sDir . '/' . $sFile) . '</p>');
                 }
             }
         }
